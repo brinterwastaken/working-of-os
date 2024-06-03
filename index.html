@@ -1,28 +1,45 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Working of an OS</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="node_modules/reveal.js/dist/reveal.css">
-    <link rel="stylesheet" href="node_modules/reveal.js/dist/theme/black.css" id="theme">
-</head>
-<body>
-    <div class="reveal">
-        <div class="slides">
-            <section data-background-image="/images/macintosh-1.png">
-            </section>
-            <section data-background-iframe="/intro-slide/">
-            </section>
-            <section data-background-image="/images/happy-mac.png">
-              <div class="menubar">File   Edit   View   Go</div>
-              <div class="window slide3-diagram" data-header="Parts of an OS">
-                <img src="/images/parts-of-os-diagram.png" alt="">
-              </div>
-            </section>
-        </div>
-    </div>
 
-    <script src="main.js" type="module"></script>
+<head>
+  <meta charset="utf-8">
+  <title>Working of an OS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="node_modules/reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="node_modules/reveal.js/dist/theme/black.css" id="theme">
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section data-background-image="/images/macintosh-1.png">
+      </section>
+      <section data-background-iframe="/intro-slide/">
+      </section>
+      <section data-background-image="/images/happy-mac.png" data-background-transition="fade-in slide-out">
+        <div class="menubar">
+          <div>File</div>
+          <div>Edit</div>
+          <div>View</div>
+          <div>Go</div>
+        </div>
+        <div class="system6window slide3-diagram" data-header="Parts of an OS">
+          <img src="/images/parts-of-os-diagram.png" alt="">
+        </div>
+      </section>
+      <section data-background-color="#008282" data-transition-speed="slow" data-background-transition="slide-in">
+        <div class="taskbar">
+          <img src="/images/taskbar/taskbar-start.png" alt="">
+          <div class="taskbar-piece"></div>
+          <img src="/images/taskbar/taskbar-end.png" alt="">
+        </div>
+        <div class="desktopIcons"></div>
+        <div class="win95window"></div>
+      </section>
+    </div>
+  </div>
+
+  <script src="main.js" type="module"></script>
 </body>
+
 </html>

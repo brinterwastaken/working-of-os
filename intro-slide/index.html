@@ -10,7 +10,12 @@
 
 <body>
   <video id="bgVid" src="/videos/intro.mov" autoplay></video>
-  <div class="menubar">File Edit View Go</div>
+  <div class="menubar">
+    <div>File</div>
+    <div>Edit</div>
+    <div>View</div>
+    <div>Go</div>
+  </div>
   <div class="window title" data-header="Title">Working of an OS</div>
   <div class="window credits" data-header="Credits">Presented by Trinethr N</div>
 </body>
@@ -43,7 +48,7 @@
   .menubar {
     font-family: 'Press Start 2P';
     font-size: 0.8rem;
-    padding: 0.5rem;
+    padding: 0.5rem 1.5rem;
     text-align: left;
     position: relative;
     top: 0;
@@ -52,6 +57,8 @@
     color: black;
     background-color: white;
     border-bottom: 0.15rem solid black;
+    display: flex;
+    gap: 1.5rem;
   }
 
   .title {

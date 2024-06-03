@@ -9,11 +9,14 @@ iframe {
 .controls {
   transform: scale(0.75);
 }
-
+section {
+  height: 100vh;
+  width: 100vw;
+}
 .menubar {
   font-family: 'Press Start 2P';
   font-size: 0.8rem;
-  padding: 0.5rem;
+  padding: 0.5rem 1.5rem;
   text-align: left;
   position: relative;
   top: 0;
@@ -22,8 +25,10 @@ iframe {
   color: black;
   background-color: white;
   border-bottom: 0.15rem solid black;
+  display: flex;
+  gap: 1.5rem;
 }
-.window::before {
+.system6window::before {
   color: black;
   content: attr(data-header);
   font-family: 'Press Start 2P';
@@ -41,7 +46,7 @@ iframe {
 .slide3-diagram {
   position: absolute;
   left: 50%;
-  top: 50vh;
+  top: 50%;
   transform: translate(-50%, -50%);
   font-size: 1.5rem;
   padding: 2rem 0rem 1.5rem 00.5rem;
@@ -51,4 +56,42 @@ iframe {
 }
 .slide3-diagram img {
   margin: 0;
+}
+.taskbar {
+  height: 2.5rem;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  justify-content: space-between;
+  background-color: #c3c3c3;
+}
+.taskbar::before {
+  content: "Boot Process";
+  position: absolute;
+  color: black;
+  font-family: 'Press Start 2P';
+  font-size: 0.8rem;
+  left: 5.7rem;
+  top: 0.8rem;
+}
+.taskbar img {
+  margin: 0;
+}
+.taskbar-piece {
+  height: 2.5rem;
+  width: 100%;
+  background-image: url(/images/taskbar/taskbar-piece.png);
+  background-size: 1.25rem;
+  background-repeat: repeat-x;
+}
+.desktopIcons {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 6rem;
+  height: 35rem;
+  background-size: cover;
+  background-repeat: none;
+  background-image: url(/images/win95-icons.png);
 }
