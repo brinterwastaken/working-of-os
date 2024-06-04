@@ -4,6 +4,13 @@ iframe {
   border: none;
 }
 .controls-arrow {
+  opacity: 0.25;
+  transition: opacity 500ms;
+}
+.controls-arrow:hover {
+  opacity: 1;
+}
+.controls-arrow {
   color: black;
 }
 .controls {
@@ -71,6 +78,12 @@ section {
 .note-about-os ul {
   margin: 0;
   padding-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.note-about-os ul li {
+  line-height: 120%;
 }
 .bootprocess {
   color: black;

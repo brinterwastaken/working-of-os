@@ -18,9 +18,12 @@
   </div>
   <div class="window title" data-header="Title">
     <div>Working of an OS</div>
-    <div>...and history of UI</div>
+    <div>...and history of OS User Interface</div>
   </div>
-  <div class="window credits" data-header="Credits">Presented by Trinethr N</div>
+  <div class="window credits" data-header="Credits">
+    <div>Presented by Trinethr</div>
+    <a href="https://brin.is-a.dev/">https://brin.is-a.dev/</a>
+  </div>
 </body>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
@@ -35,6 +38,7 @@
   }
 
   video {
+    display: none;
     z-index: 100;
     position: absolute;
     top: 50%;
@@ -98,6 +102,10 @@
     line-height: 1.5rem;
     border: 0.15rem solid black;
     background-color: white;
+  }
+  .credits a {
+    font-family: 'Consolas';
+    font-size: 0.95rem;
   }
 
   .window::before {
