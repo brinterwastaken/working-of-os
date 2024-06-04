@@ -36,19 +36,51 @@
           </ul>
         </div>
       </section>
-      <section data-background-color="#008282" data-transition-speed="slow" data-background-transition="slide-in">
+      <section data-background-color="#008282" data-transition-speed="slow" data-background-transition="slide-in"
+        data-auto-animate>
         <div class="taskbar">
           <img src="/images/taskbar/taskbar-start.png" alt="">
           <div class="taskbar-piece"></div>
           <img src="/images/taskbar/taskbar-end.png" alt="">
         </div>
         <div class="desktopIcons"></div>
-        <div class="win95window" data-title="Boot Process">
+        <div class="win95window" data-title="Boot Process" data-id="bootprocess">
           <div class="tl"></div>
           <div class="t"></div>
           <div class="tr"></div>
           <div class="ml"></div>
-          <div class="content"></div>
+          <div class="content bootprocess">
+            <h1>Step 1: CPU Initialization</h1>
+            <div class="bootstep step1">
+              <p>When the CPU receives power, it begins executing the firmware (BIOS/UEFI). The BIOS/UEFI runs Power-On
+                Self Test (POST) to check hardware integrity.</p>
+              <span class="img"></span>
+            </div>
+            <h1>Step 2: Loading and Executing Boot Loader</h1>
+            <div class="bootstep step2">
+              <div>
+                <p>The firmware locates the bootloader on the storage drive, loads it into memory and executes it.</p>
+                <p>The bootloader then loads the operating system kernel into memory.</p>
+              </div>
+              <span class="img"></span>
+            </div>
+            <h1>Step 3: Kernel Initialization and Startup Services</h1>
+            <div class="bootstep step3">
+              <div>
+                <p>The kernel initializes system components and hardware drivers, then starts the initial process.</p>
+                <p>The init process runs startup scripts and services, allowing the computer to access network, GPU, and other devices/functions.</p>
+              </div>
+              <span class="img"></span>
+            </div>
+            <h1>Step 4: Login Manager and Startup Applications</h1>
+            <div class="bootstep step4">
+              <div>
+                <p>The login manager displays the login screen to the user.</p>
+                <p>When the user logs in, the OS starts the desktop environment and startup applications.</p>
+              </div>
+              <span class="img"></span>
+            </div>
+          </div>
           <div class="mr"></div>
           <div class="bl"></div>
           <div class="b"></div>

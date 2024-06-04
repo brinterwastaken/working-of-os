@@ -72,3 +72,44 @@ section {
   margin: 0;
   padding-right: 1rem;
 }
+.bootprocess {
+  color: black;
+  padding: 1rem;
+}
+.bootprocess h1 {
+  all: unset;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.bootprocess p {
+  text-align: left;
+  margin: 0.25rem;
+  font-size: 0.95rem;
+}
+.bootstep {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.bootstep .img {
+  flex-shrink: 0;
+  width: 48px;
+  background-size: 48px !important;
+}
+.step1 .img {
+  height: 48px;
+  background: url(/images/win95/chip.png) center;
+}
+.step2 .img {
+  height: 32px;
+  background: url(/images/win95/drive.png) bottom;
+}
+.step3 .img {
+  height: 48px;
+  background: url(/images/win95/computer.png) bottom;
+}
+.step4 .img {
+  height: 48px;
+  background: url(/images/win95/lock-with-keys.png) bottom;
+}

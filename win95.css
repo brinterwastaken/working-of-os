@@ -43,8 +43,7 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 40rem;
-  height: 20rem;
+  width: 45rem;
   display: grid;
   grid-template-columns: 6px calc(100% - 12px) 6px;
   grid-template-rows: 6px calc(100% - 12px) 6px;
@@ -66,7 +65,7 @@
   background: #030383;
 }
 .win95window .content {
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
 }
 .tl::before {
   content: '';
