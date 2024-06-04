@@ -16,7 +16,10 @@
     <div>View</div>
     <div>Go</div>
   </div>
-  <div class="window title" data-header="Title">Working of an OS</div>
+  <div class="window title" data-header="Title">
+    <div>Working of an OS</div>
+    <div>...and history of UI</div>
+  </div>
   <div class="window credits" data-header="Credits">Presented by Trinethr N</div>
 </body>
 <style>
@@ -62,15 +65,26 @@
   }
 
   .title {
+    align-items: end;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-family: 'Press Start 2P';
     position: absolute;
     top: 62%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-family: 'Press Start 2P';
-    font-size: 1.5rem;
     padding: 2rem;
     border: 0.15rem solid black;
     background-color: white;
+  }
+  .title div:nth-child(1) {
+    font-family: 'Press Start 2P';
+    font-size: 1.5rem;
+  }
+  .title div:nth-child(2) {
+    font-family: 'Consolas';
+    font-size: 0.75rem;
   }
 
   .credits {

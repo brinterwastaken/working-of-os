@@ -1,0 +1,124 @@
+
+.taskbar {
+  height: 2.5rem;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  justify-content: space-between;
+  background-color: #c3c3c3;
+}
+.taskbar::before {
+  content: "Boot Process";
+  position: absolute;
+  color: black;
+  font-family: 'Press Start 2P';
+  font-size: 0.8rem;
+  left: 5.7rem;
+  top: 0.8rem;
+}
+.taskbar img {
+  margin: 0;
+}
+.taskbar-piece {
+  height: 2.5rem;
+  width: 100%;
+  background-image: url(/images/taskbar/taskbar-piece.png);
+  background-size: 1.25rem;
+  background-repeat: repeat-x;
+}
+.desktopIcons {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 6rem;
+  height: 35rem;
+  background-size: cover;
+  background-repeat: none;
+  background-image: url(/images/win95-icons.png);
+}
+
+.win95window {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40rem;
+  height: 20rem;
+  display: grid;
+  grid-template-columns: 6px calc(100% - 12px) 6px;
+  grid-template-rows: 6px calc(100% - 12px) 6px;
+  flex-direction: column;
+  background-color: #c4c4c4;
+}
+.win95window::before {
+  content: attr(data-title);
+  font-family: 'Press Start 2P';
+  text-align: left;
+  font-size: 0.8rem;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: calc(100% - 12px);
+  height: 1.5rem;
+  padding: 0.3rem;
+  box-sizing: border-box;
+  background: #030383;
+}
+.win95window .content {
+  margin-top: 1.5rem;
+}
+.tl::before {
+  content: '';
+  position: absolute;
+  right: 9px;
+  top: 9px;
+  width: 68px;
+  height: calc(68/100 * 28px);
+  background-image: url(/images/win95/controls.png);
+  background-size: 68px;
+}
+
+.win95window .t, .win95window .b {
+  width: 100%;
+  height: 6px;
+  background-size: 6px;
+}
+.win95window .ml, .win95window .mr {
+  width: 6px;
+  height: 100%;
+  background-size: 6px;
+}
+
+.win95window .t {
+  background-image: url(/images/win95/t.png);
+}
+.win95window .b {
+  background-image: url(/images/win95/b.png);
+}
+
+.win95window .tl, .win95window .tr, .win95window .bl, .win95window .br {
+  width: 6px;
+  height: 6px;
+  background-size: 6px;
+}
+.win95window .tl {
+  background-image: url(/images/win95/tl.png);
+}
+.win95window .tr {
+  background-image: url(/images/win95/tr.png);
+}
+
+.win95window .bl {
+  background-image: url(/images/win95/bl.png);
+}
+.win95window .br {
+  background-image: url(/images/win95/br.png);
+}
+
+.win95window .ml {
+  background-image: url(/images/win95/l.png);
+}
+.win95window .mr {
+  background-image: url(/images/win95/r.png);
+}

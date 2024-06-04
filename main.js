@@ -1,4 +1,5 @@
 import './style.css';
+import './win95.css';
 import Reveal from 'reveal.js';
 
 Reveal.initialize({
