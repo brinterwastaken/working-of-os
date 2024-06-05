@@ -1,0 +1,49 @@
+.taskbarXP {
+  font-size: 0.9rem;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: calc(100% - 170px);
+  height: 30px;
+  display: flex;
+  background-image: url(/images/winXP/taskbar/empty.png);
+  margin-left: 110px;
+  margin-right: 60px;
+}
+.taskbarXP::before {
+  content: '';
+  width: 130px;
+  position: absolute;
+  left: -110px;
+  height: 30px;
+  background-image: url(/images/winXP/taskbar/l.png);
+  z-index: -1;
+}
+.taskbarXP::after {
+  content: '';
+  width: 60px;
+  position: absolute;
+  right: -60px;
+  height: 30px;
+  background-image: url(/images/winXP/taskbar/r.png);
+}
+.taskbarXP .pinned {
+  width: 110px;
+  height: 30px;
+  background: url(/images/winXP/taskbar/pinned.png) left no-repeat;
+  background-size: 100px;
+}
+.taskbarXP .task {
+  width: 160px;
+  height: 30px;
+  padding: 0.4rem;
+  text-align: left;
+  box-sizing: border-box;
+}
+.taskbarXP .task.active {
+  background-image: url(/images/winXP/taskbar/task-active.png);
+}
+
+.taskbarXP .task.inactive {
+  background-image: url(/images/winXP/taskbar/task-inactive.png);
+}
