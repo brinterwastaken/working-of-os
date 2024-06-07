@@ -90,8 +90,27 @@
       <section data-background-image="/images/winXP/wallpaper.webp">
         <div class="taskbarXP">
           <div class="pinned"></div>
-          <div class="task active">Hello</div>
-          <div class="task inactive">Hello 2</div>
+          <div class="task active">Memory Management</div>
+          <div class="task inactive">Task Manager</div>
+        </div>
+        <div class="XPwindow" id="memMgmt">
+          <div class="titlebar">Memory Management</div>
+          <div class="content">
+            <h1>Memory Management</h1>
+            <p>The OS performs many functions to ensure no issues occur when multiple programs are running. Some of them are listed below.</p>
+            <ul>
+              <li><b>Memory Allocation:</b> The OS allocates specific amount of memory for each program, to ensure there are no conflicts.</li>
+              <li><b>Virtual Memory:</b> If the computer runs out of RAM, the OS uses a part of the storage as RAM temporarily.</li>
+              <li><b>Memory Protection:</b> The OS makes sure each program only uses its own allocated space, preventing interference with other programs.</li>
+              <li><b>Paging:</b> The OS breaks the memory into small fixed-size blocks called pages, which helps in managing memory more efficiently.</li>
+              <li><b>Cache Management:</b> The operating system uses cache to store frequently accessed data in high speed memory, to increase data retrieval speeds.</li>
+            </ul>
+          </div>
+          <div class="footer"></div>
+        </div>
+        <div class="XPwindow inactive" id="taskMgr">
+          <div class="titlebar">Task Manager</div>
+          <div class="footer"></div>
         </div>
       </section>
     </div>

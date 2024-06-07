@@ -47,3 +47,136 @@
 .taskbarXP .task.inactive {
   background-image: url(/images/winXP/taskbar/task-inactive.png);
 }
+.XPwindow {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  color: black;
+  resize: both;
+  padding: 1rem;
+}
+.XPwindow::before {
+  content: "";
+  left: 0;
+  top: 0;
+  position: absolute;
+  height: 100%;
+  width: 4px;
+  background-image: url(/images/winXP/window/l.png);
+  background-size: 4px;
+}
+.XPwindow::after {
+  content: "";
+  top: 0;
+  right: 0;
+  position: absolute;
+  height: 100%;
+  width: 4px;
+  background-image: url(/images/winXP/window/r.png);
+  background-size: 4px;
+}
+.XPwindow .footer {
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background-image: url(/images/winXP/window/b.png);
+  background-size: 4px;
+}
+.XPwindow .footer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 4px;
+  background-image: url(/images/winXP/window/lb.png);
+  background-size: 4px;
+}
+.XPwindow .footer::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  width: 4px;
+  background-image: url(/images/winXP/window/rb.png);
+  background-size: 4px;
+}
+.XPwindow .titlebar {
+  z-index: 2;
+  position: absolute;
+  font-size: 1.25rem;
+  text-align: left;
+  color: white;
+  top: -30px;
+  left: 20px;
+  height: 30px;
+  width: calc(100% - 100px);
+  background-image: url(/images/winXP/window/titlebar-m.png);
+  background-size: 30px;
+  padding: 0.2rem 0.5rem;
+  box-sizing: border-box;
+}
+.XPwindow .titlebar::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  bottom: 0;
+  height: 30px;
+  width: 30px;
+  background-image: url(/images/winXP/window/titlebar-l.png);
+  background-size: 30px;
+}
+.XPwindow .titlebar::after {
+  content: "";
+  position: absolute;
+  right: -80px;
+  bottom: 0;
+  height: 30px;
+  width: 90px;
+  background-image: url(/images/winXP/window/titlebar-r.png);
+  background-size: 90px;
+}
+.XPwindow.inactive {
+  filter: saturate(0.65);
+}
+.XPwindow h1 {
+  all: unset;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.XPwindow p {
+  font-size: 1.15rem;
+  margin: 0.2rem;
+}
+.XPwindow ul {
+  list-style: decimal;
+  margin-left: 0;
+  margin-right: 0.5rem;
+  margin-block: 1rem;
+}
+.XPwindow li {
+  font-size: 1.15rem;
+  margin-block-end: 0.5rem;
+}
+.XPwindow#memMgmt {
+  left: 35%;
+  top: 45%;
+  width:  40rem;
+  background: #ebe9de;
+  z-index: 1;
+}
+.XPwindow#taskMgr {
+  left: 80%;
+  top: 55%;
+  padding: 0;
+  background-image: url(/images/winXP/taskmgr.png);
+  width: 24rem;
+  height: 27.5rem;
+  background-size: 24rem;
+}
