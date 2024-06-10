@@ -12,6 +12,7 @@
     "vite": "^5.2.0"
   },
   "dependencies": {
+    "7.css": "^0.16.0",
     "reveal.js": "^5.1.0"
   }
 }

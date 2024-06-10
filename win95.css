@@ -43,7 +43,7 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 45rem;
+  width: 50rem;
   display: grid;
   grid-template-columns: 6px calc(100% - 12px) 6px;
   grid-template-rows: 6px calc(100% - 12px) 6px;
