@@ -1,4 +1,5 @@
 import './style.css';
+import './system6.css';
 import './win95.css';
 import './winxp.css';
 import "7.css/dist/7.scoped.css";

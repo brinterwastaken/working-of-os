@@ -91,35 +91,27 @@
     font-size: 2rem;
     font-weight: 600;
 }
-.procmgmt {
-    left: 15%;
-    top: 35%;
-    max-width: 38rem;
+.ui {
+    left: 10%;
+    top: 15%;
+    max-width: 40rem;
 }
-.procmgmt .window-body {
+.wm {
+    left: 40%;
+    top: 42%;
+    max-width: 40rem;
+}
+.window-body {
     padding-bottom: 1.5rem !important;
     display: flex;
     font-size: 1.1rem;
     flex-direction: column;
     gap: 0.5rem;
 }
-.procmgmt .window-body ul {
+.window ul {
     margin: 0;
     margin-right: 1rem;
 }
-.procmgmt .window-body li {
-    line-height: 1.6rem;
-}
-.taskmgr {
-    z-index: -1 !important;
-    left: 60%;
-    top: 25%;
-}
-
-.win7 .window.taskmgr .window-body{
-    display: flex;
-    width: fit-content;
-    width: 24.75rem;
-    height: 26.25rem;
-    background-image: url(/images/win7/procmgmt.png);
+.window li {
+    margin-bottom: 0.5rem;
 }

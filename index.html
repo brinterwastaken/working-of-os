@@ -90,32 +90,36 @@
       <section data-background-image="/images/winXP/wallpaper.webp">
         <div class="taskbarXP">
           <div class="pinned"></div>
-          <div class="task active">Memory Management</div>
+          <div class="task active">Functions of an OS</div>
           <div class="task inactive">Task Manager</div>
+          <div class="task inactive">Explorer - My Computer</div>
+          <div class="task inactive">Minesweeper</div>
         </div>
-        <div class="XPwindow" id="memMgmt">
-          <div class="titlebar">Memory Management</div>
+        <div class="XPwindow" id="functions">
+          <div class="titlebar">Functions of an OS</div>
           <div class="content">
-            <h1>Memory Management</h1>
-            <p>The OS performs many functions to ensure no issues occur when multiple programs are running. Some of them
-              are listed below.</p>
+            <h1>Functions of an OS</h1>
+            <p>Some general functions of an OS are listed below.</p>
             <ul>
-              <li><b>Memory Allocation:</b> The OS allocates specific amount of memory for each program, to ensure there
-                are no conflicts.</li>
-              <li><b>Virtual Memory:</b> If the computer runs out of RAM, the OS uses a part of the storage as RAM
-                temporarily.</li>
-              <li><b>Memory Protection:</b> The OS makes sure each program only uses its own allocated space, preventing
-                interference with other programs.</li>
-              <li><b>Paging:</b> The OS breaks the memory into small fixed-size blocks called pages, which helps in
-                managing memory more efficiently.</li>
-              <li><b>Cache Management:</b> The operating system uses cache to store frequently accessed data in high
-                speed memory, to increase data retrieval speeds.</li>
+              <li><b>Memory Management:</b> The OS performs memory management functions to make sure memory is used effectively and the os runs smoothly.</li>
+              <li><b>Process Management:</b> The OS manages resorces given to each process, to allow all processes to run efficiently.</li>
+              <li><b>File Management:</b> The OS manages the filesystem and files stored on various devices, allowing easy read and write of files.</li>
+              <li><b>Device Management:</b> The OS manages devices connected to the computer, and loads the appropriate drivers for each device.</li>
+              <li><b>Security and Access Control:</b> The OS uses user authentication, and user-based permissions to prevent unauthorized access, and also has anti-virus software to protect against malware. </li>
             </ul>
           </div>
           <div class="footer"></div>
         </div>
         <div class="XPwindow inactive" id="taskMgr">
           <div class="titlebar">Task Manager</div>
+          <div class="footer"></div>
+        </div>
+        <div class="XPwindow inactive" id="explorer">
+          <div class="titlebar">My Computer</div>
+          <div class="footer"></div>
+        </div>
+        <div class="XPwindow inactive" id="minesweeper">
+          <div class="titlebar">Minesweeper</div>
           <div class="footer"></div>
         </div>
       </section>
@@ -139,9 +143,9 @@
             </div>
           </div>
         </div>
-        <div class="window glass active procmgmt">
+        <div class="window glass inactive ui">
           <div class="title-bar">
-            <div class="title-bar-text">Process Management</div>
+            <div class="title-bar-text">User Interface</div>
             <div class="title-bar-controls">
               <button aria-label="Minimize"></button>
               <button aria-label="Maximize"></button>
@@ -149,25 +153,31 @@
             </div>
           </div>
           <div class="window-body has-space">
-            <h1>Process Management</h1>
+            <h1>User Interface</h1>
             <ul>
-              <li>The operating system starts and runs programs when you open an application or execute a command.</li>
-              <li>It allows multiple processes at the same time allowing to switch between them easily.</li>
-              <li>It assigns resources like CPU and memory to the processes, and also makes sure all processes get a fair share of resources.</li>
-              <li>In the case of a crash or error, the OS can terminate the program to keep the system running smoothly.</li>
+              <li>The user interface is one of the most important parts of a consumer OS.</li>
+              <li>Graphical User Interface (GUI) allows the user to easily interact with the computer with a keyboard and a mouse, and perform various tasks, with the output displayed on a screen.</li>
+              <li>To have windows displayed on a screen, the OS requires a system software called the window manager.</li>
             </ul>
           </div>
         </div>
-        <div class="window glass active taskmgr">
+        <div class="window glass active wm">
           <div class="title-bar">
-            <div class="title-bar-text">Windows Task Manager</div>
+            <div class="title-bar-text">Window Manager</div>
             <div class="title-bar-controls">
               <button aria-label="Minimize"></button>
               <button aria-label="Maximize"></button>
               <button aria-label="Close"></button>
             </div>
           </div>
-          <div class="window-body">
+          <div class="window-body has-space">
+            <h1>Window Manager</h1>
+            <ul>
+              <li>The window manager receives information of what has to be rendered from the application, and renders the window in the appropriate location on the screen.</li>
+              <li>It also manages moving of windows, minimizing, fullscreen, automatic tiling, and virtual desktops.</li>
+              <li>The window manager also has a compositor to add effects like blur and animations when opening and closing windows.</li>
+              <li>The window manager, taskbar, and other UI components (notifications, etc.) make up the <i>Desktop Environment</i> of the OS.</li>
+            </ul>
           </div>
         </div>
       </section>

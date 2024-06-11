@@ -110,7 +110,7 @@
 .XPwindow .titlebar {
   z-index: 2;
   position: absolute;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   text-align: left;
   color: white;
   top: -30px;
@@ -143,7 +143,7 @@
   background-size: 90px;
 }
 .XPwindow.inactive {
-  filter: saturate(0.65);
+  filter: saturate(0.65) contrast(0.9);
 }
 .XPwindow h1 {
   all: unset;
@@ -164,19 +164,36 @@
   font-size: 1.15rem;
   margin-block-end: 0.5rem;
 }
-.XPwindow#memMgmt {
-  left: 35%;
-  top: 45%;
+.XPwindow#functions {
+  left: 55%;
+  top: 55%;
   width:  40rem;
   background: #ebe9de;
   z-index: 1;
 }
 .XPwindow#taskMgr {
   left: 80%;
-  top: 55%;
+  top: 35%;
   padding: 0;
   background-image: url(/images/winXP/taskmgr.png);
   width: 24rem;
   height: 27.5rem;
   background-size: 24rem;
+}
+.XPwindow#explorer {
+  left: 25%;
+  top: 35%;
+  background-image: url(/images/winXP/explorer.png);
+  width: 33rem;
+  height: 20rem;
+  background-size: 35rem;
+}
+.XPwindow#minesweeper {
+  left: 25%;
+  z-index: 2;
+  top: 75%;
+  background-image: url(/images/winXP/minesweeper.png);
+  width: 7rem;
+  height: 10.5rem;
+  background-size: 9rem;
 }
