@@ -10,10 +10,12 @@
     align-items: center;
     backdrop-filter: blur(3rem);
 }
+
 .yosemite .menubar img:nth-child(1) {
     margin-left: 0.5rem;
     width: 0.9rem;
 }
+
 .yosemite .dock {
     position: fixed;
     bottom: 0;
@@ -31,12 +33,114 @@
     gap: 1rem;
     align-items: center;
 }
+
 .yosemite .dock img {
     width: 48px;
     height: 48px;
 }
+
 .yosemite .dock .divider {
     width: 1px;
     height: 42px;
     background: #0000005f;
+}
+
+.yosemite .window {
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    font-size: 1rem;
+    transform: translate(-50%, -50%);
+    padding: 0.75rem;
+    box-shadow: 0 -0.5rem 2rem #0000005f;
+}
+
+.yosemite .window::before {
+    content: attr(data-title);
+    position: absolute;
+    color: #2f2f2f;
+    font-family: sans-serif;
+    left: -1px;
+    top: -1.75rem;
+    height: 1.75rem;
+    width: calc(100% + 2px);
+    background: linear-gradient(#ebebeb 0%, #d3d3d3 100%);
+    border-bottom: 1px solid #5c5c5c;
+    border-radius: 0.25rem 0.25rem 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.yosemite .window .controls {
+    position: absolute;
+    left: 0;
+    top: -1.75rem;
+    height: 1.75rem;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.yosemite .window .controls * {
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 0.1rem solid #2f2f2f2f;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+
+.yosemite .window .controls .close {
+    background: #fb625c;
+}
+
+.yosemite .window .controls .minimize {
+    background: #fcbc40;
+}
+
+.yosemite .window .controls .maximize {
+    background: #33c748;
+}
+
+.yosemite .terminal {
+    background-color: #212121df;
+    backdrop-filter: blur(2rem);
+    border-radius: 0 0 0.25rem 0.25rem;
+    font-family: monospace;
+    width: 50rem;
+    text-align: left;
+    box-sizing: border-box;
+    border: 1px solid #ffffff2f;
+}
+
+.terminal ul {
+    margin: 0 2rem 0 0;
+}
+
+.terminal .green {
+    display: inline;
+    color: rgb(64, 207, 64);
+}
+.terminal .ascii-art {
+    font-size: 0.8rem;
+    color: #83c5fc;
+    text-align: center;
+    white-space: preserve;
+}
+.terminal .cursorblink {
+    display: inline;
+    color: #ebebeb;
+    animation: blink 1s steps(1) infinite;
+}
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
