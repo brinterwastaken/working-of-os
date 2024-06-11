@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <video id="bgVid" src="/videos/intro.mov" autoplay></video>
+  <video id="bgVid" src="/videos/intro.mov"></video>
   <div class="menubar">
     <div>File</div>
     <div>Edit</div>
@@ -121,15 +121,17 @@
 </style>
 <script>
   let vid = document.getElementById("bgVid");
+  let completed = false;
   window.addEventListener('message', async event => {
-    if (event.data === 'slide:start') {
+    if (event.data === 'slide:start' && completed == false) {
+      vid.play();
       await setTimeout(() => {
         vid.style.setProperty("transform", "translate(-50%, -15%) scale(240%)");
       }, 2000);
       await setTimeout(() => {
-
         vid.style.opacity = 0;
       }, 8000);
+      completed = true;
     }
   });
 </script>
