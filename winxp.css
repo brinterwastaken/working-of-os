@@ -189,7 +189,7 @@
   background-size: 35rem;
 }
 .XPwindow#minesweeper {
-  left: 25%;
+  left: 20%;
   z-index: 2;
   top: 75%;
   background-image: url(/images/winXP/minesweeper.png);
