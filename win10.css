@@ -22,16 +22,16 @@
     margin: 0;
     width: 1.75rem;
 }
-.taskbar .left div {
+.win10 .taskbar .left div {
     padding: 0;
     height: 105%;
     width: 3.5rem;
 }
-.taskbar .left div.active {
+.win10 .taskbar .left div.active {
     position: relative;
     background: linear-gradient(0deg, #ffffff3f 0%, #ffffff3f 95%, transparent 95%, transparent 100%); 
 }
-.taskbar .left div.active::after {
+.win10 .taskbar .left div.active::after {
     content: "";
     position: absolute;
     left: 0;
@@ -65,14 +65,15 @@
     width: 1.25rem;
 }
 
-.taskbar .datetime {
+.taskbar .datetime, .taskbar .lang {
     font-size: 0.8rem;
 }
 
 .w10window {
     position: absolute;
     transform: translate(-50%, -50%);
-    background: white;
+    background: #ffffffbf;
+    backdrop-filter: blur(1rem) saturate(1.25) contrast(1.25);
     border: 1px solid #5858587f;
     padding: 1rem;
 }

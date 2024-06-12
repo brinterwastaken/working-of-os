@@ -1,0 +1,153 @@
+.win11 .taskbar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3.25rem;
+    width: 100%;
+    box-sizing: border-box;
+    backdrop-filter: blur(2rem) saturate(1.25) contrast(1.25);
+    background: #101010af;
+    border-top: 1px solid #ffffff1f;
+    display: flex;
+    justify-content: space-evenly;
+}
+.win11 .taskbar .left {
+    flex: 1;
+}
+.win11 .taskbar .right {
+    flex: 1;
+}
+.win11 .taskbar .center {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: fit-content;
+    gap: 0.5rem;
+}
+.win11 .taskbar .center img {
+    margin: 0;
+    width: 1.75rem;
+}
+.win11 .taskbar .center div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    height: 85%;
+    width: 3rem;
+    border-radius: 0.25rem;
+}
+
+.win11 .taskbar .right {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    justify-content: end;
+    gap: 1rem;
+    padding: 0 0.5rem;
+}
+
+.win11 .taskbar .datetime {
+    padding-right: 0.5rem;
+    text-align: right;
+}
+.win11 .center div.active {
+    position: relative;
+    background: #ffffff1f;
+}
+.win11 .center div.active::after {
+    content: "";
+    width: 1rem;
+    height: 0.2rem;
+    background: #4093ff;
+    position: absolute;
+    border-radius: 0.1rem;
+    left: 1rem;
+    bottom: 0;
+}
+.win11 .firefox {
+    position: absolute;
+    width: 50rem;
+    height: 30rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #24283bcf;
+    backdrop-filter: blur(1rem) saturate(1.25) contrast(1.25);
+    border: 1px solid #5858587f;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    padding: 1rem;
+    padding-top: 5rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.win11 .firefox .header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 4rem;
+    width: 100%;
+    background-image: url(/images/win11/firefox/m.png);
+    background-size: 4rem;
+}
+.win11 .firefox .header::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 4rem;
+    width: 25.68rem;
+    background-image: url(/images/win11/firefox/l.png);
+    background-size: 25.68rem;
+}
+
+.win11 .firefox .header::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 4rem;
+    width: 15.58rem;
+    background-image: url(/images/win11/firefox/r.png);
+    background-size: 15.58rem;
+}
+
+.win11 .buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.win11 button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #4093ff;
+    border: none;
+    box-shadow: 0 0.2rem 0 #000000af;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    gap: 0.5rem;
+    font-size: 1.15rem;
+    position: relative;
+}
+.win11 button img {
+    margin: 0;
+}
+.win11 button:disabled {
+    color: black;
+    filter: saturate(0.5);
+}
+.win11 button:disabled::before {
+    content: attr(data-reason);
+    color: white;
+    position: absolute;
+    left: 0;
+    bottom: -1.5rem;
+    font-size: 1rem;
+    width: 100%;
+}

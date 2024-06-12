@@ -6,6 +6,7 @@ import "7.css/dist/7.scoped.css";
 import './win7.css';
 import './yosemite.css'
 import './win10.css'
+import './win11.css'
 import Reveal from 'reveal.js';
 
 Reveal.initialize({
