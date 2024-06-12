@@ -126,7 +126,7 @@
     font-size: 0.8rem;
     color: #83c5fc;
     text-align: center;
-    white-space: preserve;
+    white-space: pre;
 }
 .terminal .cursorblink {
     display: inline;

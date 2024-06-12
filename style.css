@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
 iframe {
   border: none;
@@ -60,4 +60,12 @@ section {
 .step4 .img {
   height: 48px;
   background: url(/images/win95/lock-with-keys.png) bottom;
+}
+.aspectratiotext {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 35%;
+  font-size: 1rem;
+  opacity: 0.5;
 }
