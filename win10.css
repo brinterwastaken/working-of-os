@@ -111,7 +111,7 @@
 }
 .w10window p, .w10window ul {
     color: black;
-    font-size: 1.25rem;
+    font-size: 1.5vw;
 }
 .w10window ul {
     margin: 0;
@@ -124,17 +124,17 @@
 .ntpd {
     left: 30%;
     top: 60%;
-    width: 40rem;
+    width: 50vw;
 }
 .hyprv {
     left: 70%;
     top: 30%;
     z-index: -1;
-    width: 45rem;
-    height: 28rem;
+    width: 55vw;
+    height: 34vw;
     padding: 0;
     background-image: url(/images/win10/ubuntu-vm/ubuntu.png);
-    background-size: 45rem;
+    background-size: 55vw;
 }
 .hyprv img {
     margin: 0;

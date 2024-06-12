@@ -92,14 +92,14 @@
     font-weight: 600;
 }
 .ui {
-    left: 10%;
-    top: 15%;
-    max-width: 40rem;
+    left: 5%;
+    top: 12%;
+    max-width: 55vw;
 }
 .wm {
     left: 40%;
-    top: 42%;
-    max-width: 40rem;
+    top: 45%;
+    max-width: 55vw;
 }
 .window-body {
     padding-bottom: 1.5rem !important;
