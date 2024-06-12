@@ -1,0 +1,141 @@
+.win10 .taskbar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3rem;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #0000007f;
+    backdrop-filter: blur(3rem);
+    display: flex;
+    justify-content: space-between;
+}
+
+.win10 .taskbar .left {
+    display: flex;
+    align-items: end;
+    height: 100%;
+    width: fit-content;
+}
+
+.win10 .taskbar .left img {
+    margin: 0;
+    width: 1.75rem;
+}
+.taskbar .left div {
+    padding: 0;
+    height: 105%;
+    width: 3.5rem;
+}
+.taskbar .left div.active {
+    position: relative;
+    background: linear-gradient(0deg, #ffffff3f 0%, #ffffff3f 95%, transparent 95%, transparent 100%); 
+}
+.taskbar .left div.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0.2rem;
+    width: 100%;
+    background-color: #45a5ffdf;
+}
+
+.win10 .taskbar .right {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    justify-content: end;
+    gap: 1rem;
+    padding: 0 0.5rem;
+}
+
+.win10 .taskbar .right img {
+    margin: 0;
+    height: 30%;
+}
+
+.taskbar .notif {
+    display: flex;
+    border-right: 1px solid #ffffffaf;
+    padding: 0.95rem;
+}
+
+.taskbar .notif img {
+    width: 1.25rem;
+}
+
+.taskbar .datetime {
+    font-size: 0.8rem;
+}
+
+.w10window {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: 1px solid #5858587f;
+    padding: 1rem;
+}
+
+.w10window .titlebar {
+    position: absolute;
+    left: -1px;
+    top: -1.75rem;
+    height: 1.75rem;
+    width: 100%;
+    background: #275fb3;
+    border: 1px solid #5858587f;
+    display: flex;
+    justify-content: space-between;
+}
+.w10window .titlebar::before {
+    color: white;
+    content: attr(data-title);
+    font-size: 1rem;
+    position: absolute;
+    left: 2.5rem;
+    top: 0.25rem;
+}
+.w10window .titlebar img:nth-child(1) {
+    margin: 0;
+    padding: 0.3rem 0.6rem;
+}
+.w10window .titlebar img:nth-child(2) {
+    margin: 0;
+    padding: 0.5rem 1rem;
+}
+.w10window h1 {
+    all: unset;
+    color: black;
+    font-size: 2rem;
+}
+.w10window p, .w10window ul {
+    color: black;
+    font-size: 1.25rem;
+}
+.w10window ul {
+    margin: 0;
+    margin-right: 0.5rem;
+}
+.w10window ul li {
+    margin-bottom: 0.25rem;
+}
+
+.ntpd {
+    left: 30%;
+    top: 60%;
+    width: 40rem;
+}
+.hyprv {
+    left: 70%;
+    top: 30%;
+    z-index: -1;
+    width: 45rem;
+    height: 28rem;
+    padding: 0;
+    background-image: url(/images/win10/ubuntu-vm/ubuntu.png);
+    background-size: 45rem;
+}
+.hyprv img {
+    margin: 0;
+}

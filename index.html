@@ -1,254 +1,426 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Working of an OS</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <link rel="stylesheet" href="node_modules/reveal.js/dist/reveal.css" />
+    <link
+      rel="stylesheet"
+      href="node_modules/reveal.js/dist/theme/black.css"
+      id="theme"
+    />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <title>Working of an OS</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link rel="stylesheet" href="node_modules/reveal.js/dist/reveal.css">
-  <link rel="stylesheet" href="node_modules/reveal.js/dist/theme/black.css" id="theme">
-</head>
-
-<body>
-  <div class="reveal">
-    <div class="slides">
-      <section data-background-image="/images/macintosh-1.png">
-      </section>
-      <section data-background-iframe="/intro-slide/" data-preload>
-      </section>
-      <section data-background-image="/images/happy-mac.png">
-        <div class="menubar">
-          <div>File</div>
-          <div>Edit</div>
-          <div>View</div>
-          <div>Go</div>
-        </div>
-        <div class="system6window slide3-diagram" data-header="Parts of an OS">
-          <img src="/images/parts-of-os-diagram.png" alt="">
-        </div>
-        <div class="system6window note-about-os" data-header="About Operating Systems">
-          <ul>
-            <li>Operating Systems make our tasks simpler by abstracting the hardware from the user.</li>
-            <li>They also perform tasks like process management and memory management to efficiently use the computer hardware.</li>
-            <li>Many Operating Systems have APIs to allow developers to easily make applications, and to also directly
-              access the hardware if required.</li>
-            <li>The OS Subsystem communicates with the Kernel of the OS using system calls.</li>
-          </ul>
-        </div>
-      </section>
-      <section data-background-color="#008282" data-auto-animate>
-        <div class="taskbar95">
-          <img src="/images/win95/taskbar/taskbar-start.png" alt="">
-          <div class="taskbar95-piece"></div>
-          <img src="/images/win95/taskbar/taskbar-end.png" alt="">
-        </div>
-        <div class="desktopIcons"></div>
-        <div class="win95window" data-title="Boot Process" data-id="bootprocess">
-          <div class="tl"></div>
-          <div class="t"></div>
-          <div class="tr"></div>
-          <div class="ml"></div>
-          <div class="content bootprocess">
-            <h1>Step 1: CPU Initialization</h1>
-            <div class="bootstep step1">
-              <p>When the CPU receives power, it begins executing the firmware (BIOS/UEFI). The BIOS/UEFI runs Power-On
-                Self Test (POST) to check hardware integrity.</p>
-              <span class="img"></span>
-            </div>
-            <h1>Step 2: Loading and Executing Boot Loader</h1>
-            <div class="bootstep step2">
-              <div>
-                <p>The firmware locates the bootloader on the storage drive, loads it into memory and executes it.</p>
-                <p>The bootloader then loads the operating system kernel into memory.</p>
-              </div>
-              <span class="img"></span>
-            </div>
-            <h1>Step 3: Kernel Initialization and Startup Services</h1>
-            <div class="bootstep step3">
-              <div>
-                <p>The kernel initializes system components and hardware drivers, then starts the initial process.</p>
-                <p>The init process runs startup scripts and services, allowing the computer to access network, GPU, and
-                  other devices/functions.</p>
-              </div>
-              <span class="img"></span>
-            </div>
-            <h1>Step 4: Login Manager and Startup Applications</h1>
-            <div class="bootstep step4">
-              <div>
-                <p>The login manager displays the login screen to the user.</p>
-                <p>When the user logs in, the OS starts the desktop environment and startup applications.</p>
-              </div>
-              <span class="img"></span>
-            </div>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-background-image="/images/macintosh-1.png"></section>
+        <section data-background-iframe="/intro-slide/" data-preload></section>
+        <section data-background-image="/images/happy-mac.png">
+          <div class="menubar">
+            <div>File</div>
+            <div>Edit</div>
+            <div>View</div>
+            <div>Go</div>
           </div>
-          <div class="mr"></div>
-          <div class="bl"></div>
-          <div class="b"></div>
-          <div class="br"></div>
-        </div>
-      </section>
-      <section data-background-image="/images/winXP/wallpaper.webp">
-        <div class="taskbarXP">
-          <div class="pinned"></div>
-          <div class="task active">Functions of an OS</div>
-          <div class="task inactive">Task Manager</div>
-          <div class="task inactive">Explorer - My Computer</div>
-          <div class="task inactive">Minesweeper</div>
-        </div>
-        <div class="XPwindow" id="functions">
-          <div class="titlebar">Functions of an OS</div>
-          <div class="content">
-            <h1>Functions of an OS</h1>
-            <p>Some general functions of an OS are listed below.</p>
+          <div
+            class="system6window slide3-diagram"
+            data-header="Parts of an OS"
+          >
+            <img src="/images/parts-of-os-diagram.png" alt="" />
+          </div>
+          <div
+            class="system6window note-about-os"
+            data-header="About Operating Systems"
+          >
             <ul>
-              <li><b>Memory Management:</b> The OS performs memory management functions to make sure memory is used effectively and the os runs smoothly.</li>
-              <li><b>Process Management:</b> The OS manages resorces given to each process, to allow all processes to run efficiently.</li>
-              <li><b>File Management:</b> The OS manages the filesystem and files stored on various devices, allowing easy read and write of files.</li>
-              <li><b>Device Management:</b> The OS manages devices connected to the computer, and loads the appropriate drivers for each device.</li>
-              <li><b>Security and Access Control:</b> The OS uses user authentication, and user-based permissions to prevent unauthorized access, and also has anti-virus software to protect against malware. </li>
+              <li>
+                Operating Systems make our tasks simpler by abstracting the
+                hardware from the user.
+              </li>
+              <li>
+                They also perform tasks like process management and memory
+                management to efficiently use the computer hardware.
+              </li>
+              <li>
+                Many Operating Systems have APIs to allow developers to easily
+                make applications, and to also directly access the hardware if
+                required.
+              </li>
+              <li>
+                The OS Subsystem communicates with the Kernel of the OS using
+                system calls.
+              </li>
             </ul>
           </div>
-          <div class="footer"></div>
-        </div>
-        <div class="XPwindow inactive" id="taskMgr">
-          <div class="titlebar">Task Manager</div>
-          <div class="footer"></div>
-        </div>
-        <div class="XPwindow inactive" id="explorer">
-          <div class="titlebar">My Computer</div>
-          <div class="footer"></div>
-        </div>
-        <div class="XPwindow inactive" id="minesweeper">
-          <div class="titlebar">Minesweeper</div>
-          <div class="footer"></div>
-        </div>
-      </section>
-      <section data-background-image="/images/win7/wallpaper.jpg" class="win7">
-        <div class="taskbar7 window glass active">
-          <div class="title-bar"></div>
-          <div class="items">
-            <div class="icons">
-              <img src="/images/win7/start.png" alt="">
-              <img src="/images/win7/explorer.png" alt="">
-              <img src="/images/win7/paint.png" alt="">
-              <img src="/images/win7/ie.png" alt="">
-            </div>
-            <div class="clock">
-              <div>
-                <div>21:43</div>
-                <div>23/07/2024</div>
+        </section>
+        <section data-background-color="#008282" data-auto-animate>
+          <div class="taskbar95">
+            <img src="/images/win95/taskbar/taskbar-start.png" alt="" />
+            <div class="taskbar95-piece"></div>
+            <img src="/images/win95/taskbar/taskbar-end.png" alt="" />
+          </div>
+          <div class="desktopIcons"></div>
+          <div
+            class="win95window"
+            data-title="Boot Process"
+            data-id="bootprocess"
+          >
+            <div class="tl"></div>
+            <div class="t"></div>
+            <div class="tr"></div>
+            <div class="ml"></div>
+            <div class="content bootprocess">
+              <h1>Step 1: CPU Initialization</h1>
+              <div class="bootstep step1">
+                <p>
+                  When the CPU receives power, it begins executing the firmware
+                  (BIOS/UEFI). The BIOS/UEFI runs Power-On Self Test (POST) to
+                  check hardware integrity.
+                </p>
+                <span class="img"></span>
               </div>
-              <div class="desktopbutton">
+              <h1>Step 2: Loading and Executing Boot Loader</h1>
+              <div class="bootstep step2">
+                <div>
+                  <p>
+                    The firmware locates the bootloader on the storage drive,
+                    loads it into memory and executes it.
+                  </p>
+                  <p>
+                    The bootloader then loads the operating system kernel into
+                    memory.
+                  </p>
+                </div>
+                <span class="img"></span>
+              </div>
+              <h1>Step 3: Kernel Initialization and Startup Services</h1>
+              <div class="bootstep step3">
+                <div>
+                  <p>
+                    The kernel initializes system components and hardware
+                    drivers, then starts the initial process.
+                  </p>
+                  <p>
+                    The init process runs startup scripts and services, allowing
+                    the computer to access network, GPU, and other
+                    devices/functions.
+                  </p>
+                </div>
+                <span class="img"></span>
+              </div>
+              <h1>Step 4: Login Manager and Startup Applications</h1>
+              <div class="bootstep step4">
+                <div>
+                  <p>
+                    The login manager displays the login screen to the user.
+                  </p>
+                  <p>
+                    When the user logs in, the OS starts the desktop environment
+                    and startup applications.
+                  </p>
+                </div>
+                <span class="img"></span>
+              </div>
+            </div>
+            <div class="mr"></div>
+            <div class="bl"></div>
+            <div class="b"></div>
+            <div class="br"></div>
+          </div>
+        </section>
+        <section data-background-image="/images/winXP/wallpaper.webp">
+          <div class="taskbarXP">
+            <div class="pinned"></div>
+            <div class="task active">Functions of an OS</div>
+            <div class="task inactive">Task Manager</div>
+            <div class="task inactive">Explorer - My Computer</div>
+            <div class="task inactive">Minesweeper</div>
+          </div>
+          <div class="XPwindow" id="functions">
+            <div class="titlebar">Functions of an OS</div>
+            <div class="content">
+              <h1>Functions of an OS</h1>
+              <p>Some general functions of an OS are listed below.</p>
+              <ul>
+                <li>
+                  <b>Memory Management:</b> The OS performs memory management
+                  functions to make sure memory is used effectively and the os
+                  runs smoothly.
+                </li>
+                <li>
+                  <b>Process Management:</b> The OS manages resorces given to
+                  each process, to allow all processes to run efficiently.
+                </li>
+                <li>
+                  <b>File Management:</b> The OS manages the filesystem and
+                  files stored on various devices, allowing easy read and write
+                  of files.
+                </li>
+                <li>
+                  <b>Device Management:</b> The OS manages devices connected to
+                  the computer, and loads the appropriate drivers for each
+                  device.
+                </li>
+                <li>
+                  <b>Security and Access Control:</b> The OS uses user
+                  authentication, and user-based permissions to prevent
+                  unauthorized access, and also has anti-virus software to
+                  protect against malware.
+                </li>
+              </ul>
+            </div>
+            <div class="footer"></div>
+          </div>
+          <div class="XPwindow inactive" id="taskMgr">
+            <div class="titlebar">Task Manager</div>
+            <div class="footer"></div>
+          </div>
+          <div class="XPwindow inactive" id="explorer">
+            <div class="titlebar">My Computer</div>
+            <div class="footer"></div>
+          </div>
+          <div class="XPwindow inactive" id="minesweeper">
+            <div class="titlebar">Minesweeper</div>
+            <div class="footer"></div>
+          </div>
+        </section>
+        <section
+          data-background-image="/images/win7/wallpaper.jpg"
+          class="win7"
+        >
+          <div class="taskbar7 window glass active">
+            <div class="title-bar"></div>
+            <div class="items">
+              <div class="icons">
+                <img src="/images/win7/start.png" alt="" />
+                <img src="/images/win7/explorer.png" alt="" />
+                <img src="/images/win7/paint.png" alt="" />
+                <img src="/images/win7/ie.png" alt="" />
+              </div>
+              <div class="clock">
+                <div>
+                  <div>21:43</div>
+                  <div>23/07/2024</div>
+                </div>
+                <div class="desktopbutton"></div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="window glass inactive ui">
-          <div class="title-bar">
-            <div class="title-bar-text">User Interface</div>
-            <div class="title-bar-controls">
-              <button aria-label="Minimize"></button>
-              <button aria-label="Maximize"></button>
-              <button aria-label="Close"></button>
+          <div class="window glass inactive ui">
+            <div class="title-bar">
+              <div class="title-bar-text">User Interface</div>
+              <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close"></button>
+              </div>
+            </div>
+            <div class="window-body has-space">
+              <h1>User Interface</h1>
+              <ul>
+                <li>
+                  The user interface is one of the most important parts of a
+                  consumer OS.
+                </li>
+                <li>
+                  Graphical User Interface (GUI) allows the user to easily
+                  interact with the computer with a keyboard and a mouse, and
+                  perform various tasks, with the output displayed on a screen.
+                </li>
+                <li>
+                  To have windows displayed on a screen, the OS requires a
+                  system software called the window manager.
+                </li>
+              </ul>
             </div>
           </div>
-          <div class="window-body has-space">
-            <h1>User Interface</h1>
-            <ul>
-              <li>The user interface is one of the most important parts of a consumer OS.</li>
-              <li>Graphical User Interface (GUI) allows the user to easily interact with the computer with a keyboard and a mouse, and perform various tasks, with the output displayed on a screen.</li>
-              <li>To have windows displayed on a screen, the OS requires a system software called the window manager.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="window glass active wm">
-          <div class="title-bar">
-            <div class="title-bar-text">Window Manager</div>
-            <div class="title-bar-controls">
-              <button aria-label="Minimize"></button>
-              <button aria-label="Maximize"></button>
-              <button aria-label="Close"></button>
+          <div class="window glass active wm">
+            <div class="title-bar">
+              <div class="title-bar-text">Window Manager</div>
+              <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close"></button>
+              </div>
+            </div>
+            <div class="window-body has-space">
+              <h1>Window Manager</h1>
+              <ul>
+                <li>
+                  The window manager receives information of what has to be
+                  rendered from the application, and renders the window in the
+                  appropriate location on the screen.
+                </li>
+                <li>
+                  It also manages moving of windows, minimizing, fullscreen,
+                  automatic tiling, and virtual desktops.
+                </li>
+                <li>
+                  The window manager also has a compositor to add effects like
+                  blur and animations when opening and closing windows.
+                </li>
+                <li>
+                  The window manager, taskbar, and other UI components
+                  (notifications, etc.) make up the
+                  <i>Desktop Environment</i> of the OS.
+                </li>
+              </ul>
             </div>
           </div>
-          <div class="window-body has-space">
-            <h1>Window Manager</h1>
-            <ul>
-              <li>The window manager receives information of what has to be rendered from the application, and renders the window in the appropriate location on the screen.</li>
-              <li>It also manages moving of windows, minimizing, fullscreen, automatic tiling, and virtual desktops.</li>
-              <li>The window manager also has a compositor to add effects like blur and animations when opening and closing windows.</li>
-              <li>The window manager, taskbar, and other UI components (notifications, etc.) make up the <i>Desktop Environment</i> of the OS.</li>
-            </ul>
+        </section>
+        <section
+          data-background-image="/images/yosemite/wallpaper.jpg"
+          class="yosemite"
+        >
+          <div class="menubar">
+            <img src="/images/yosemite/apple.png" alt="" />
+            <b>Finder</b>
+            <div>File</div>
+            <div>Edit</div>
+            <div>View</div>
+            <div>Go</div>
+            <div style="flex-grow: 1"></div>
+            <img src="/images/yosemite/battery.png" alt="" />
+            <img src="/images/yosemite/wifi.png" alt="" />
+            <div>Tuesday, 15:34</div>
+            <b>Trinethr</b>
+            <img src="/images/yosemite/search.png" alt="" />
           </div>
-        </div>
-      </section>
-      <section data-background-image="/images/yosemite/wallpaper.jpg" class="yosemite">
-        <div class="menubar">
-          <img src="/images/yosemite/apple.png" alt="">
-          <b>Finder</b>
-          <div>File</div>
-          <div>Edit</div>
-          <div>View</div>
-          <div>Go</div>
-          <div style="flex-grow: 1;"></div>
-          <img src="/images/yosemite/battery.png" alt="">
-          <img src="/images/yosemite/wifi.png" alt="">
-          <div>Tuesday, 15:34</div>
-          <b>Trinethr</b>
-          <img src="/images/yosemite/search.png" alt="">
-        </div>
-        <div class="dock">
-          <img src="/images/yosemite/dock-icons/finder.png" alt="">
-          <img src="/images/yosemite/dock-icons/launchpad.png" alt="">
-          <img src="/images/yosemite/dock-icons/safari.png" alt="">
-          <img src="/images/yosemite/dock-icons/photos.png" alt="">
-          <img src="/images/yosemite/dock-icons/contacts.png" alt="">
-          <img src="/images/yosemite/dock-icons/mail.png" alt="">
-          <img src="/images/yosemite/dock-icons/calculator.png" alt="">
-          <img src="/images/yosemite/dock-icons/dictionary.png" alt="">
-          <img src="/images/yosemite/dock-icons/textedit.png" alt="">
-          <img src="/images/yosemite/dock-icons/notes.png" alt="">
-          <img src="/images/yosemite/dock-icons/maps.png" alt="">
-          <img src="/images/yosemite/dock-icons/preview.png" alt="">
-          <img src="/images/yosemite/dock-icons/expose.png" alt="">
-          <img src="/images/yosemite/dock-icons/appstore.png" alt="">
-          <img src="/images/yosemite/dock-icons/settings.png" alt="">
-          <div class="divider"></div>
-          <img src="/images/yosemite/dock-icons/trash.png" alt="">
-        </div>
-        <div class="window terminal" data-title="Trinethr - bash - 80x24">
-          <div class="controls">
-            <span class="close"></span>
-            <span class="minimize"></span>
-            <span class="maximize"></span>
+          <div class="dock">
+            <img src="/images/yosemite/dock-icons/finder.png" alt="" />
+            <img src="/images/yosemite/dock-icons/launchpad.png" alt="" />
+            <img src="/images/yosemite/dock-icons/safari.png" alt="" />
+            <img src="/images/yosemite/dock-icons/photos.png" alt="" />
+            <img src="/images/yosemite/dock-icons/contacts.png" alt="" />
+            <img src="/images/yosemite/dock-icons/mail.png" alt="" />
+            <img src="/images/yosemite/dock-icons/calculator.png" alt="" />
+            <img src="/images/yosemite/dock-icons/dictionary.png" alt="" />
+            <img src="/images/yosemite/dock-icons/textedit.png" alt="" />
+            <img src="/images/yosemite/dock-icons/notes.png" alt="" />
+            <img src="/images/yosemite/dock-icons/maps.png" alt="" />
+            <img src="/images/yosemite/dock-icons/preview.png" alt="" />
+            <img src="/images/yosemite/dock-icons/expose.png" alt="" />
+            <img src="/images/yosemite/dock-icons/appstore.png" alt="" />
+            <img src="/images/yosemite/dock-icons/settings.png" alt="" />
+            <div class="divider"></div>
+            <img src="/images/yosemite/dock-icons/trash.png" alt="" />
           </div>
-          <div class="green">trinethr@Macintosh-HD ~ $</div> 
-          <div style="display: inline;">python shell-description.py</div>
-          <div class="ascii-art">
-███████╗██╗  ██╗███████╗██╗     ██╗     
-██╔════╝██║  ██║██╔════╝██║     ██║     
-███████╗███████║█████╗  ██║     ██║     
-╚════██║██╔══██║██╔══╝  ██║     ██║     
-███████║██║  ██║███████╗███████╗███████╗
-╚══════╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝
+          <div class="window terminal" data-title="Trinethr - bash - 80x24">
+            <div class="controls">
+              <span class="close"></span>
+              <span class="minimize"></span>
+              <span class="maximize"></span>
+            </div>
+            <div class="green">trinethr@Macintosh-HD ~ $</div>
+            <div style="display: inline">python shell-description.py</div>
+            <div class="ascii-art">
+              ███████╗██╗ ██╗███████╗██╗ ██╗ ██╔════╝██║ ██║██╔════╝██║ ██║
+              ███████╗███████║█████╗ ██║ ██║ ╚════██║██╔══██║██╔══╝ ██║ ██║
+              ███████║██║ ██║███████╗███████╗███████╗ ╚══════╝╚═╝
+              ╚═╝╚══════╝╚══════╝╚══════╝
 
-<i>The bridge between the user and kernel.</i>
+              <i>The bridge between the user and kernel.</i>
+            </div>
+            <ul>
+              <li>
+                When a user opens the terminal on a computer, they are greeted
+                with a window displaying a
+                <div class="green">prompt</div>
+                .
+              </li>
+              <li>
+                This prompt is provided by the <b>shell</b> of the operating
+                system, which interprets the commands entered by the user and
+                executes them.
+              </li>
+              <li>
+                Most shells have a scripting language to run multiple commands
+                programmatically, to automate repeated tasks.
+              </li>
+              <li>
+                The shell is a useful tools for developers as it allows to
+                interact with the kernel and perform many functions faster than
+                with a GUI.
+              </li>
+              <li>
+                Windows uses <i>PowerShell</i> and <i>cmd</i>, while Linux and
+                MacOS (Unix) use <i>bash</i> or <i>zsh</i>, and there are others
+                that can be installed if required.
+              </li>
+            </ul>
+            <div>Process completed with exit code 0.</div>
+            <div class="green">trinethr@Macintosh-HD ~ $</div>
+            <div class="cursorblink">█</div>
           </div>
-          <ul>
-            <li>When a user opens the terminal on a computer, they are greeted with a window displaying a <div class="green">prompt</div>.</li>
-            <li>This prompt is provided by the <b>shell</b> of the operating system, which interprets the commands entered by the user and executes them.</li>
-            <li>Most shells have a scripting language to run multiple commands programmatically, to automate repeated tasks.</li>
-            <li>The shell is a useful tools for developers as it allows to interact with the kernel and perform many functions faster than with a GUI.</li>
-            <li>Windows uses <i>PowerShell</i> and <i>cmd</i>, while Linux and MacOS (Unix) use <i>bash</i> or <i>zsh</i>, and there are others that can be installed if required.</li>
-          </ul>
-          <div>Process completed with exit code 0.</div>
-          <div class="green">trinethr@Macintosh-HD ~ $</div>
-          <div class="cursorblink">█</div>
-        </div>
-      </section>
+        </section>
+        <section
+          data-background-image="/images/win10/wallpaper.webp"
+          class="win10"
+        >
+          <div class="taskbar">
+            <div class="left">
+              <div>
+                <img src="/images/win10/icons/windows.png" alt="" />
+              </div>
+              <div>
+                <img src="/images/win10/icons/task-view.png" alt="" />
+              </div>
+              <div>
+                <img src="/images/win10/icons/explorer.png" alt="" />
+              </div>
+              <div class="active">
+                <img src="/images/win10/icons/notepad.png" alt="" />
+              </div>
+              <div>
+                <img src="/images/win10/icons/firefox.png" alt="" />
+              </div>
+              <div class="active">
+                <img src="/images/win10/icons/hyper-v.png" alt="" />
+              </div>
+            </div>
+            <div class="right">
+              <img src="/images/win10/taskbar-tray-icons.png" alt="" />
+              <div class="datetime">
+                <div>22:24</div>
+                <div>12/06/2024</div>
+              </div>
+              <div class="notif">
+                <img src="/images/win10/icons/notif-icon.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="w10window ntpd">
+            <div class="titlebar" data-title="Notepad - C:\Users\Trinethr\Documents\differences.txt">
+              <img src="/images/win10/icons/notepad.png" alt="" />
+              <img src="/images/win10/window-controls.png" alt="">
+            </div>
+            <h1>Major Operating Systems</h1>
+            <div style="color: black; font-size: 1.25rem;">and their use cases</div>
+            <p>Most operating systems running on Non-Embedded Systems can be classified into three types - Windows-(based?), Unix-based, Linux-based.</p>
+            <ul>
+              <li>Unix and Linux share similar file structures, shells, and architectures, whereas Windows differs slightly in these aspects.</li>
+              <li>In fact, the MacOS operating system is based on the Unix kernel (darwin). The similarities between Linux and MacOS are evident based on the directory structure, commands, etc.</li>
+              <li>MacOS and Windows are widely used in consumer computers, as they are easy to use, reliable, and have great software support.</li>
+              <li>Many programmers choose Linux based Operating Systems for speed and efficiency, and to customize as per their requirements.</li>
+              <li>Linux can be customized exactly according to the use case, and hence it is widely used in servers, super computers, and IOT devices.</li>
+              <li>Users can also use a virtual machine to test software on another operating system without installing it to their own computer. </li>
+            </ul>
+          </div>
+          <div class="w10window hyprv">
+            <div class="titlebar" data-title="HyperV Virtual Machine - Ubuntu 24.04">
+              <img src="/images/win10/icons/hyper-v.png" alt="" />
+              <img src="/images/win10/window-controls.png" alt="">
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
-  </div>
 
-  <script src="main.js" type="module"></script>
-</body>
-
+    <script src="main.js" type="module"></script>
+  </body>
 </html>
