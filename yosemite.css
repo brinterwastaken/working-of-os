@@ -127,6 +127,7 @@
     color: #83c5fc;
     text-align: center;
     white-space: pre;
+    padding-bottom: 1rem;
 }
 .terminal .cursorblink {
     display: inline;

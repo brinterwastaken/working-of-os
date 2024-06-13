@@ -157,7 +157,7 @@
     background: #5aa2ff;
 }
 .win11 button:not(:disabled):active {
-    background: #4093ff;
+    background: #3b8af1;
     filter: brightness(0.9);
     transform: translateY(0.2rem);
     box-shadow: 0 0 0 #000000af;
