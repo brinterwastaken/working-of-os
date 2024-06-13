@@ -13,5 +13,6 @@ Reveal.initialize({
   progress: false,
   hash:true,
   margin: 0,
-  disableLayout: true
+  disableLayout: true,
+  navigationMode: 'grid',
 });
