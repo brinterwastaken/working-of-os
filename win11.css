@@ -124,6 +124,7 @@
 
 .win11 button {
     display: flex;
+    cursor: pointer;
     justify-content: center;
     align-items: center;
     background: #4093ff;
@@ -134,6 +135,7 @@
     gap: 0.5rem;
     font-size: 1.15rem;
     position: relative;
+    transition: background 50ms, transform 50ms, box-shadow 50ms;
 }
 .win11 button img {
     margin: 0;
@@ -150,4 +152,13 @@
     bottom: -1.5rem;
     font-size: 1rem;
     width: 100%;
+}
+.win11 button:not(:disabled):hover {
+    background: #5aa2ff;
+}
+.win11 button:not(:disabled):active {
+    background: #4093ff;
+    filter: brightness(0.9);
+    transform: translateY(0.2rem);
+    box-shadow: 0 0 0 #000000af;
 }

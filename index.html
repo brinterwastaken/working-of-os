@@ -48,7 +48,7 @@
           </ul>
         </div>
       </section>
-      <section data-background-color="#008282" data-auto-animate>
+      <section data-background-color="#008282" data-auto-animate class="win95">
         <div class="taskbar95">
           <img src="/images/win95/taskbar/taskbar-start.png" alt="" />
           <div class="taskbar95-piece"></div>
@@ -119,7 +119,7 @@
           <div class="br"></div>
         </div>
       </section>
-      <section data-background-image="/images/winXP/wallpaper.webp">
+      <section data-background-image="/images/winXP/wallpaper.webp" c;ass="winXP">
         <div class="taskbarXP">
           <div class="pinned"></div>
           <div class="task active">Functions of an OS</div>
@@ -175,86 +175,100 @@
           <div class="footer"></div>
         </div>
       </section>
-      <section data-background-image="/images/win7/wallpaper.jpg" class="win7">
-        <div class="taskbar7 window glass active">
-          <div class="title-bar"></div>
-          <div class="items">
-            <div class="icons">
-              <img src="/images/win7/start.png" alt="" />
-              <img src="/images/win7/explorer.png" alt="" />
-              <img src="/images/win7/paint.png" alt="" />
-              <img src="/images/win7/ie.png" alt="" />
-            </div>
-            <div class="clock">
-              <div>
-                <div>21:43</div>
-                <div>23/07/2024</div>
+      <section class="user-interface">
+        <section data-background-image="/images/win7/wallpaper.jpg" class="win7">
+          <div class="taskbar7 window glass active">
+            <div class="title-bar"></div>
+            <div class="items">
+              <div class="icons">
+                <img src="/images/win7/start.png" alt="" />
+                <img src="/images/win7/explorer.png" alt="" />
+                <img src="/images/win7/paint.png" alt="" />
+                <img src="/images/win7/ie.png" alt="" />
               </div>
-              <div class="desktopbutton"></div>
+              <div class="clock">
+                <div>
+                  <div>21:43</div>
+                  <div>23/07/2024</div>
+                </div>
+                <div class="desktopbutton"></div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="window glass inactive ui">
-          <div class="title-bar">
-            <div class="title-bar-text">User Interface</div>
-            <div class="title-bar-controls">
-              <button aria-label="Minimize"></button>
-              <button aria-label="Maximize"></button>
-              <button aria-label="Close"></button>
+          <div class="window glass inactive ui">
+            <div class="title-bar">
+              <div class="title-bar-text">User Interface</div>
+              <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close"></button>
+              </div>
+            </div>
+            <div class="window-body has-space">
+              <h1>User Interface</h1>
+              <ul>
+                <li>
+                  The user interface is one of the most important parts of a
+                  consumer OS.
+                </li>
+                <li>
+                  Graphical User Interface (GUI) allows the user to easily
+                  interact with the computer with a keyboard and a mouse, and
+                  perform various tasks, with the output displayed on a screen.
+                </li>
+                <li>
+                  To have windows displayed on a screen, the OS requires a
+                  system software called the window manager.
+                </li>
+              </ul>
             </div>
           </div>
-          <div class="window-body has-space">
-            <h1>User Interface</h1>
-            <ul>
-              <li>
-                The user interface is one of the most important parts of a
-                consumer OS.
-              </li>
-              <li>
-                Graphical User Interface (GUI) allows the user to easily
-                interact with the computer with a keyboard and a mouse, and
-                perform various tasks, with the output displayed on a screen.
-              </li>
-              <li>
-                To have windows displayed on a screen, the OS requires a
-                system software called the window manager.
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="window glass active wm">
-          <div class="title-bar">
-            <div class="title-bar-text">Window Manager</div>
-            <div class="title-bar-controls">
-              <button aria-label="Minimize"></button>
-              <button aria-label="Maximize"></button>
-              <button aria-label="Close"></button>
+          <div class="window glass active wm">
+            <div class="title-bar">
+              <div class="title-bar-text">Window Manager</div>
+              <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close"></button>
+              </div>
+            </div>
+            <div class="window-body has-space">
+              <h1>Window Manager</h1>
+              <ul>
+                <li>
+                  The window manager receives information of what has to be
+                  rendered from the application, and renders the window in the
+                  appropriate location on the screen.
+                </li>
+                <li>
+                  It also manages moving of windows, minimizing, fullscreen,
+                  automatic tiling, and virtual desktops.
+                </li>
+                <li>
+                  The window manager also has a compositor to add effects like
+                  blur and animations when opening and closing windows.
+                </li>
+                <li>
+                  The window manager, taskbar, and other UI components
+                  (notifications, etc.) make up the
+                  <i>Desktop Environment</i> of the OS.
+                </li>
+              </ul>
             </div>
           </div>
-          <div class="window-body has-space">
-            <h1>Window Manager</h1>
-            <ul>
-              <li>
-                The window manager receives information of what has to be
-                rendered from the application, and renders the window in the
-                appropriate location on the screen.
-              </li>
-              <li>
-                It also manages moving of windows, minimizing, fullscreen,
-                automatic tiling, and virtual desktops.
-              </li>
-              <li>
-                The window manager also has a compositor to add effects like
-                blur and animations when opening and closing windows.
-              </li>
-              <li>
-                The window manager, taskbar, and other UI components
-                (notifications, etc.) make up the
-                <i>Desktop Environment</i> of the OS.
-              </li>
-            </ul>
+        </section>
+        <section data-background-image="/images/misc/floating-wm-blur.png">
+          <div class="pageblur">
+            Floating Window Manager
+            <img src="/images/misc/floating-wm.png" alt="">
           </div>
-        </div>
+        </section>
+        <section data-background-image="/images/misc/tiling-wm-blur.png">
+          <div class="pageblur">
+            Tiling Window Manager
+            <img src="/images/misc/tiling-wm.png" alt="">
+          </div>
+        </section>
       </section>
       <section data-background-image="/images/yosemite/wallpaper.jpg" class="yosemite">
         <div class="menubar">
@@ -299,15 +313,15 @@
           <div class="green">trinethr@Macintosh-HD ~ $</div>
           <div style="display: inline">python shell-description.py</div>
           <div class="ascii-art">
-            <!--noformat-->
-███████╗██╗ ██╗███████╗██╗ ██╗
-██╔════╝██║ ██║██╔════╝██║ ██║
-███████╗███████║█████╗ ██║ ██║
-╚════██║██╔══██║██╔══╝ ██║ ██║
-███████║██║ ██║███████╗███████╗███████╗
-╚══════╝╚═╝ ╚═╝╚══════╝╚══════╝╚══════╝
+<!--noformat-->
+███████╗ ██╗  ██╗ ███████╗ ██╗      ██╗     
+██╔════╝ ██║  ██║ ██╔════╝ ██║      ██║     
+███████╗ ███████║ █████╗   ██║      ██║     
+╚════██║ ██╔══██║ ██╔══╝   ██║      ██║     
+███████║ ██║  ██║ ███████╗ ███████╗ ███████╗
+╚══════╝ ╚═╝  ╚═╝ ╚══════╝ ╚══════╝ ╚══════╝
 <i>The bridge between the user and kernel.</i>
-            <!--noformat-->
+<!--noformat-->
           </div>
           <ul>
             <li>

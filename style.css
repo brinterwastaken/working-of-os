@@ -69,3 +69,19 @@ section {
   font-size: 1rem;
   opacity: 0.5;
 }
+.pageblur {
+  padding: 3rem;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  background: #0000002f;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.pageblur img {
+  border-radius: 1rem;
+  border: 0.25rem solid #ffffff2f;
+}
